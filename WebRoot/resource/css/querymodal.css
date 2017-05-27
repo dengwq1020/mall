@@ -1,0 +1,218 @@
+#queryModal {
+	display: none;
+}
+
+#queryModal .modal-dialog {
+	width: 1000px;
+	border-radius: 5px;
+}
+
+#queryModal .modal-dialog .modal-body,
+#queryModal .modal-dialog .modal-body .query-info {
+	position: relative;
+}
+
+#queryModal .modal-header {
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#aebcbf+0,6e7774+50,0a0e0a+51,0a0809+100;Black+Gloss */
+	background: rgb(174, 188, 191);
+	/* Old browsers */
+	background: -moz-linear-gradient(top, rgba(174, 188, 191, 1) 0%, rgba(110, 119, 116, 1) 50%, rgba(10, 14, 10, 1) 51%, rgba(10, 8, 9, 1) 100%);
+	/* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(174, 188, 191, 1) 0%, rgba(110, 119, 116, 1) 50%, rgba(10, 14, 10, 1) 51%, rgba(10, 8, 9, 1) 100%);
+	/* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(174, 188, 191, 1) 0%, rgba(110, 119, 116, 1) 50%, rgba(10, 14, 10, 1) 51%, rgba(10, 8, 9, 1) 100%);
+	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aebcbf', endColorstr='#0a0809', GradientType=0);
+	/* IE6-9 */
+}
+
+#queryModal .modal-dialog .close {
+	color: #fff;
+	opacity: 1;
+}
+
+#queryModal .modal-title {
+	font: bold 18px "微软雅黑";
+	color: #FFFFFF;
+	text-align: center;
+}
+
+#queryModal .modal-dialog .modal-body {
+	margin: 0 auto;
+	height: 700px;
+	/*border: 1px solid red;*/
+	padding-bottom: 30px;
+	/*overflow: scroll;*/
+}
+
+#queryModal .modal-body .query-head,
+#queryModal .modal-body .query-info {
+	border: 1px solid #DDDDDD;
+	border-radius: 5px;
+	background-color: #F7F7F9;
+}
+
+#queryModal .modal-body .query-head{
+	height: 100px;
+}
+
+
+#queryModal .modal-body .query-head .query-time span {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+#queryModal .modal-body .query-head .query-time .start-time,
+#queryModal .modal-body .query-head .query-time .end-time {
+	width: 300px;
+	height: 49px;
+	line-height: 49px;
+	padding-left: 10px;
+	font-size: 16px;
+	border-right: 1px solid #DDDDDD;
+}
+
+#queryModal .modal-body .query-head .query-time .start-time {
+	border-bottom: 1px solid #DDDDDD;
+}
+
+#queryModal .modal-body .query-head .query-time,
+#queryModal .modal-body .query-button .queryByName {
+	float: left;
+}
+
+#queryModal .modal-body .query-head .query-time .start-time #start-date,
+#queryModal .modal-body .query-head .query-time .end-time #end-date,
+#queryModal .modal-body .query-head .query-button .query-name {
+	height: 30px;
+	line-height: 30px;
+	border-color: #DDDDDD;
+}
+
+#queryModal .modal-body .query-head .query-button .query-name {
+	border: 0;
+	text-indent: 10px;
+}
+
+#queryModal .modal-body .query-head .query-time ::-webkit-input-placeholder,
+#queryModal .modal-body .query-head .query-button .queryByName ::-webkit-input-placeholder {
+	font-size: 14px;
+	color: #E4B9B9;
+}
+
+#queryModal .modal-body .query-head .query-time ::-webkit-input-placeholder {
+	text-align: center;
+}
+
+#queryModal .modal-body .query-head .query-button .queryByName ::-webkit-input-placeholder {
+	padding-left: 5px;
+}
+
+#queryModal .modal-body .query-button .queryByName {
+	position: absolute;
+	width: 225px;
+	height: 32px;
+	background-color: #FFFFFF;
+	border-radius: 5px;
+	left: 312px;
+	top: 10px;
+	border: 1px solid #DDDDDD;
+}
+
+#queryModal .modal-body .query-button .queryByName .query-name {
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+#queryModal .modal-body .query-button .queryByName a {
+	display: block;
+	width: 33px;
+	height: 32px;
+	float: right;
+}
+
+#queryModal .modal-body .query-button .queryByName i {
+	font-size: 20px;
+	line-height: 30px;
+	padding-left: 7px;
+}
+
+#queryModal .modal-body .query-button .nameBtn,
+#queryModal .modal-body .query-button .allBtn,
+#queryModal .modal-body .query-button .fromDeathBtn,
+#queryModal .modal-body .query-button .priceBtn,
+#queryModal .modal-body .query-button .totalBtn {
+	position: absolute;
+	width: 150px;
+	height: 35px;
+	line-height: 35px;
+	font-size: 14px;
+	font-weight: bold;
+	color: red;
+}
+
+#queryModal .modal-body .query-button .nameBtn {
+	left: 350px;
+	top: 55px;
+}
+
+#queryModal .modal-body .query-button .allBtn {
+	left: 575px;
+	top: 55px;
+}
+
+#queryModal .modal-body .query-button .fromDeathBtn {
+	left: 575px;
+	top: 6px;
+}
+
+#queryModal .modal-body .query-button .priceBtn {
+	left: 775px;
+	top: 6px;
+}
+
+#queryModal .modal-body .query-button .totalBtn {
+	left: 775px;
+	top: 55px;
+}
+
+#queryModal .modal-body .query-info{
+	height: 575px;
+	margin-top: 5px;
+}
+
+#queryModal .modal-body .query-info .part1 .table caption,
+#queryModal .modal-body .query-info .part2 .table caption{
+	text-align: center;
+	color: #FFFFFF;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.65+0,0+100;Neutral+Density */
+background: -moz-linear-gradient(top,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+
+}
+
+#queryModal .modal-body .query-info .part1 .table tbody,
+#queryModal .modal-body .query-info .part2 .table tbody,
+#queryModal .modal-body .query-info .part1 .table thead th,
+#queryModal .modal-body .query-info .part2 .table thead th{
+	text-align: center;
+}
+
+
+#bbg {
+	background-color: #000;
+	position: fixed;
+	z-index: 99;
+	left: 0;
+	top: 0;
+	display: none;
+	width: 100%;
+	height: 20%;
+	opacity: 0.3;
+	filter: alpha(opacity=30);
+	-moz-opacity: 0.3;
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XSSConfig>
+    <!--是否授权过滤，列表内不绑定过滤-->
+    <whiteList>
+    	<white>/weChat</white>  
+    </whiteList>
+</XSSConfig>

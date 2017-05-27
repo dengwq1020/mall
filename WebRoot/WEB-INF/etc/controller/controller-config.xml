@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+     	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
+        http://www.springframework.org/schema/oxm http://www.springframework.org/schema/oxm/spring-oxm-3.2.xsd">
+	
+
+	<context:component-scan base-package="com.xiyi.weixin.action">
+		<context:include-filter expression="org.springframework.stereotype.Controller" type="annotation" />
+	</context:component-scan>
+
+	<context:component-scan base-package="com.hb.action">
+		<context:include-filter expression="org.springframework.stereotype.Controller" type="annotation" />
+	</context:component-scan>
+	<context:component-scan base-package="com.xiyi.app.action">
+		<context:include-filter expression="org.springframework.stereotype.Controller" type="annotation" />
+	</context:component-scan>
+
+
+	<context:component-scan base-package="com.hb.action"/>
+	<!-- 默认的注解映射的支持 -->
+	<mvc:annotation-driven />
+	<mvc:resources location="/resource/audio/" mapping="/audio/**"/>
+	<mvc:resources location="/resource/images/" mapping="/images/**"/>
+	<mvc:resources location="/resource/js/" mapping="/js/**"/>
+	<mvc:resources location="/resource/css/" mapping="/css/**"/>
+	<mvc:resources location="/resource/*.txt" mapping="/*.txt"/>
+	
+	<!-- 视图解释类 -->
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
+		<property name="prefix" value="/WEB-INF/page/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+	
+	
+	   	<!-- SpringMVC上传文件时，需要配置MultipartResolver处理器 -->  
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">  
+        <property name="defaultEncoding" value="UTF-8"/>  
+        <property name="uploadTempDir" value="static/upload/shopimg"/> 
+        <!-- 指定所上传文件的总大小不能超过200KB。注意maxUploadSize属性的限制不是针对单个文件，而是所有文件的容量之和 -->  
+       <!--  <property name="maxUploadSize" value="20000000"/> -->
+    </bean>  
+      
+    <bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+		<property name="exceptionMappings">
+			<props>
+				<prop key="org.springframework.web.servlet.PageNotFound">400</prop>
+				<prop key="java.lang.Exception">500</prop>
+				<!-- SpringMVC在超出上传文件限制时，会抛出org.springframework.web.multipart.MaxUploadSizeExceededException -->  
+    			<!-- 该异常是SpringMVC在检查上传的文件信息时抛出来的，而且此时还没有进入到Controller方法中 -->  
+				<!-- 遇到MaxUploadSizeExceededException异常时，自动跳转到/WEB-INF/jsp/error_fileupload.jsp页面 -->  
+                <prop key="org.springframework.web.multipart.MaxUploadSizeExceededException">error_fileupload</prop>  
+			</props>
+		</property>
+	</bean> 
+    
+    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping" />  
+	<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">  
+	    <property name="messageConverters">  
+	        <list>  
+	            <bean class="org.springframework.http.converter.StringHttpMessageConverter" >
+	            	<constructor-arg value="UTF-8" />            	
+	                <property name="supportedMediaTypes">  
+	                    <list>  
+	                        <value>text/html; charset=UTF-8</value>  
+	                        <value>application/json;charset=UTF-8</value>  
+	                    </list>  
+	                </property>  
+	            </bean>  
+	            <bean class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">  
+	                <property name="supportedMediaTypes">  
+	                    <list>  
+	                        <value>text/html; charset=UTF-8</value>  
+	                        <value>application/json;charset=UTF-8</value>  
+	                    </list>  
+	                </property>  
+	            </bean>  
+	        </list>  
+	    </property>  
+	</bean>
+	<!-- <mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/app/*.do"/>
+			<bean class="com.xiyi.app.filter.AppAuthFilter"></bean>
+		</mvc:interceptor>
+	</mvc:interceptors>  -->
+	<!-- 微信拦截器 -->
+	  <!--<mvc:interceptors>
+	 	 <mvc:interceptor>
+			<mvc:mapping path="/**" />
+			<mvc:exclude-mapping path="/images/**"/>
+			<mvc:exclude-mapping path="/js/**"/>
+			<mvc:exclude-mapping path="/css/**"/>
+			<bean class="com.xiyi.weixin.filter.WeiXinOauthFilter" />
+		</mvc:interceptor> 
+		<mvc:interceptor>
+			<mvc:mapping path="/**" />
+			<mvc:exclude-mapping path="/images/**"/>
+			<mvc:exclude-mapping path="/js/**"/>
+			<mvc:exclude-mapping path="/css/**"/>
+			<bean class="com.xiyi.weixin.filter.WxAuthFilter" />
+		</mvc:interceptor>				
+
+	</mvc:interceptors> 
+
+	 -->
+
+</beans>

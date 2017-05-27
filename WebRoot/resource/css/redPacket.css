@@ -1,0 +1,634 @@
+/*重置css*/
+
+@charset "utf-8";
+html,
+body,
+div,
+p,
+span,
+a,
+b,
+i,
+img,
+dd,
+dl,
+dt,
+ol,
+ul,
+li,
+table,
+tr,
+td,
+th,
+strong,
+em,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+label,
+input,
+textarea,
+iframe {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "微软雅黑", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.428571429;
+	color: #333333;
+	background-color: #ffffff;
+}
+
+html * {
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: normal;
+	font-size: 100%;
+}
+
+a {
+	color: #666;
+	text-decoration: none;
+}
+
+img {
+	border: none;
+	display: block;
+}
+
+ol,
+ul,
+li {
+	list-style: none;
+}
+
+strong,
+b {
+	font-weight: normal;
+}
+
+em,
+i {
+	font-style: normal;
+}
+
+input {
+	outline: none;
+}
+
+a:hover,
+a:focus {
+	color: #2a6496;
+	text-decoration: underline;
+}
+
+a:focus {
+	outline: thin dotted #333;
+	outline: 5px auto -webkit-focus-ring-color;
+	outline-offset: -2px;
+}
+
+.container {
+	border: 5px solid #e9e9e9;
+	padding: 5px;
+	margin-right: auto;
+	margin-left: auto;
+	width: 1850px;
+}
+
+.container:before,
+.container:after {
+	display: table;
+	content: " ";
+}
+
+.row {
+	padding: 0 10px;
+}
+
+.red-top {
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	font-size: 25px;
+	font-family: "微软雅黑";
+	color: #FFFFFF;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f85032+0,f16f5c+50,f6290c+51,f02f17+71,e73827+100;Red+Gloss+%231 */
+	background: rgb(248, 80, 50);
+	/* Old browsers */
+	background: -moz-linear-gradient(top, rgba(248, 80, 50, 1) 0%, rgba(241, 111, 92, 1) 50%, rgba(246, 41, 12, 1) 51%, rgba(240, 47, 23, 1) 71%, rgba(231, 56, 39, 1) 100%);
+	/* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(248, 80, 50, 1) 0%, rgba(241, 111, 92, 1) 50%, rgba(246, 41, 12, 1) 51%, rgba(240, 47, 23, 1) 71%, rgba(231, 56, 39, 1) 100%);
+	/* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(248, 80, 50, 1) 0%, rgba(241, 111, 92, 1) 50%, rgba(246, 41, 12, 1) 51%, rgba(240, 47, 23, 1) 71%, rgba(231, 56, 39, 1) 100%);
+	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#e73827', GradientType=0);
+	/* IE6-9 */
+}
+
+.bottom {
+	height: 100px;
+}
+
+.red-left {
+	height: 800px;
+	/*border: 1px solid #000000;*/
+	overflow: scroll;
+}
+
+
+/*.red-left左边部分*/
+
+.red-left {
+	width: 50%;
+	float: left;
+}
+/*.red-right右边部分*/
+
+.red-right {
+	width: 50%;
+	float: right;
+	height: 800px;
+}
+
+
+.red-left .list-unstyled {
+	/*border: 1px solid ;*/
+}
+
+.red-left .list-unstyled .info {
+	width: 32%;
+	height: 600px;
+	border: 1px solid #DDDDDD;
+	float: left;
+	margin: 5px;
+	position: relative;
+	border-radius: 5px;
+}
+
+.red-left .list-unstyled .info ul li {
+	display: block;
+	height: 500px;
+}
+
+.red-left .list-unstyled .info li h5,
+.red-right-top h5 {
+	font-size: 16px;
+	color: #FFF;
+	text-align: center;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cb60b3+0,c146a1+50,a80077+51,db36a4+100;Pink+Gloss */
+	background: rgb(203, 96, 179);
+	/* Old browsers */
+	background: -moz-linear-gradient(top, rgba(203, 96, 179, 1) 0%, rgba(193, 70, 161, 1) 50%, rgba(168, 0, 119, 1) 51%, rgba(219, 54, 164, 1) 100%);
+	/* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(203, 96, 179, 1) 0%, rgba(193, 70, 161, 1) 50%, rgba(168, 0, 119, 1) 51%, rgba(219, 54, 164, 1) 100%);
+	/* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(203, 96, 179, 1) 0%, rgba(193, 70, 161, 1) 50%, rgba(168, 0, 119, 1) 51%, rgba(219, 54, 164, 1) 100%);
+	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cb60b3', endColorstr='#db36a4', GradientType=0);
+	/* IE6-9 */
+}
+
+.breadcrumb {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f6f8f9+0,e5ebee+50,d7dee3+51,f5f7f9+100;White+Gloss */
+	background: rgb(246, 248, 249);
+	/* Old browsers */
+	background: -moz-linear-gradient(top, rgba(246, 248, 249, 1) 0%, rgba(229, 235, 238, 1) 50%, rgba(215, 222, 227, 1) 51%, rgba(245, 247, 249, 1) 100%);
+	/* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(246, 248, 249, 1) 0%, rgba(229, 235, 238, 1) 50%, rgba(215, 222, 227, 1) 51%, rgba(245, 247, 249, 1) 100%);
+	/* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(246, 248, 249, 1) 0%, rgba(229, 235, 238, 1) 50%, rgba(215, 222, 227, 1) 51%, rgba(245, 247, 249, 1) 100%);
+	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f8f9', endColorstr='#f5f7f9', GradientType=0);
+	/* IE6-9 */
+}
+
+.red-left .list-unstyled .info .list-group .list-group-item {
+	height: 42px;
+}
+
+.red-left .list-unstyled .info .list-group li>span+span:before {
+	padding: 0 5px;
+	color: #ccc;
+	content: "/\00a0";
+}
+
+.red-left .list-unstyled .info .list-group .list-group-item span {
+	display: block;
+	float: left;
+}
+
+.red-left .list-unstyled .info .list-group .list-group-item span:nth-child(1) {
+	width: 35%;
+	text-align: left;
+}
+
+.red-left .list-unstyled .info .list-group .list-group-item span:nth-child(2) {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: 35%;
+}
+
+.red-left .list-unstyled .info .list-group .list-group-item span:nth-child(3) {
+	width: 30%;
+	text-align: left;
+}
+
+.red-left .list-unstyled .info li .breadcrumb,
+.red-right .red-right-top .info .breadcrumb {
+	font: bold 16px "微软雅黑";
+	height: 45px;
+	line-height: 45px;
+	padding: 0;
+	margin: 0;
+}
+
+.red-left .list-unstyled .info li .breadcrumb {
+	text-align: center;
+}
+
+
+/*收益*/
+
+.red-left .list-unstyled .info li .earnings {
+	position: absolute;
+	width: 95%;
+	left: 2%;
+	bottom: 48px;
+	border: 1px solid #DDDDDD;
+	height: 45px;
+	border-radius: 5px;
+}
+
+.red-left .list-unstyled .info li .earnings span:nth-child(1),
+.red-left .list-unstyled .info li .earnings span:nth-child(2) {
+	font-weight: bold;
+	line-height: 45px;
+	float: left;
+	text-align: center;
+}
+
+.red-left .list-unstyled .info li .earnings span:nth-child(1) {
+	width: 28%;
+	text-align: center;
+	color: #FFFFFF;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f3c5bd+0,e86c57+50,ea2803+51,ff6600+75,c72200+100;Red+Gloss */
+	background: rgb(243, 197, 189);
+	/* Old browsers */
+	background: -moz-linear-gradient(top, rgba(243, 197, 189, 1) 0%, rgba(232, 108, 87, 1) 50%, rgba(234, 40, 3, 1) 51%, rgba(255, 102, 0, 1) 75%, rgba(199, 34, 0, 1) 100%);
+	/* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(243, 197, 189, 1) 0%, rgba(232, 108, 87, 1) 50%, rgba(234, 40, 3, 1) 51%, rgba(255, 102, 0, 1) 75%, rgba(199, 34, 0, 1) 100%);
+	/* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(243, 197, 189, 1) 0%, rgba(232, 108, 87, 1) 50%, rgba(234, 40, 3, 1) 51%, rgba(255, 102, 0, 1) 75%, rgba(199, 34, 0, 1) 100%);
+	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3c5bd', endColorstr='#c72200', GradientType=0);
+	/* IE6-9 */
+}
+
+.red-left .list-unstyled .info li .earnings span:nth-child(2) {
+	width: 67%;
+	padding-left: 5px;
+	color: red;
+}
+
+.red-left .list-unstyled .info .state {
+	width: 90%;
+	position: absolute;
+	bottom: 7px;
+	left: 5%;
+	height: 35px;
+	font-weight: bold;
+	line-height: 35px;
+}
+
+.red-left ul li .active {
+	width: 100%;
+	font-weight: bold;
+	text-align: center;
+	border: 1px solid goldenrod;
+	margin-top: 0;
+}
+
+
+
+
+/*.red-right右边上半部分*/
+
+.red-right .red-right-top {
+	height: 450px;
+	width: 100%;
+	/*border: 1px solid red;*/
+	overflow: scroll;
+}
+
+.red-right .red-right-top h5 {
+	margin-top: 5px;
+	text-align: center;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.red-right .red-right-top .info {
+	/*border: 1px solid red;*/
+	height: 400px;
+}
+
+.red-right .red-right-top .info .breadcrumb {
+	text-align: left;
+}
+
+.red-right .red-right-top .info .breadcrumb li:nth-child(1) {
+	width: 14%;
+	padding-left: 30px;
+}
+
+.red-right .red-right-top .info .breadcrumb li:nth-child(2) {
+	width: 25%;
+	padding-left: 30px;
+}
+
+.red-right .red-right-top .info .breadcrumb li:nth-child(3) {
+	width: 25%;
+	padding-left: 30px;
+}
+
+.red-right .red-right-top .info .breadcrumb li:nth-child(4) {
+	width: 20%;
+	padding-left: 30px;
+}
+
+.red-right .red-right-top .info .one li>span+span:before {
+	padding: 0 5px;
+	color: #ccc;
+	content: "/\00a0";
+}
+
+.red-right .red-right-top .info .one {
+	margin-bottom: 0;
+}
+
+.immune,
+.danger,
+.success {
+	height: 50px;
+	padding: 0;
+}
+
+.red-right .red-right-top .info .one .list-group-item span {
+	display: block;
+	float: left;
+	height: 40px;
+	line-height: 50px;
+}
+
+.red-right .red-right-top .info .one .list-group-item span:nth-child(1) {
+	padding-left: 30px;
+	width: 20%;
+}
+
+.red-right .red-right-top .info .one .list-group-item span:nth-child(2) {
+	width: 26%;
+}
+
+.red-right .red-right-top .info .one .list-group-item span:nth-child(3) {
+	width: 26%;
+}
+
+.red-right .red-right-top .info .one .list-group-item span:nth-child(4) {
+	width: 20%;
+}
+
+.red-right .red-right-top .info .other ul {
+	margin-top: 5px;
+}
+
+.red-right .red-right-top .info .other ul li {
+	padding: 0;
+	height: 40px;
+	line-height: 40px;
+}
+
+.red-right .red-right-top .info .other ul li div {
+	float: left;
+	height: 40px;
+}
+
+.red-right .red-right-top .info .other ul li div {
+	width: 100%;
+}
+
+.red-right .red-right-top .info .other ul li .banker span:nth-child(1),
+.red-right .red-right-top .info .other ul li .banker span:nth-child(2),
+.red-right .red-right-top .info .other ul li .rayInfo span {
+	display: block;
+	font: bold 16px "微软雅黑";
+	float: left;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+}
+
+.red-right .red-right-top .info .other ul .rayList {
+	height: 125px;
+}
+
+.red-right .red-right-top .info .other ul .rayList p {
+	padding: 0;
+	margin: 2px;
+	float: left;
+	width: 24%;
+	text-align: center;
+	height: 35px;
+	line-height: 35px;
+	border: 1px solid #DDDDDD;
+	background-color: #F7F7F9;
+	color: red;
+}
+
+.red-right .red-right-top .info .other ul .rayList p>span+span:before {
+	padding: 0 5px;
+	color: #ccc;
+	content: "/\00a0";
+}
+
+.red-right .red-right-top .info .other ul li .banker span:nth-child(1) {
+	width: 40%;
+}
+
+.red-right .red-right-top .info .other ul li .rayInfo span {
+	width: 100%;
+}
+
+.red-right .red-right-top .info .other ul li .banker span:nth-child(1),
+.red-right .red-right-top .info .other ul li .rayInfo span {
+	color: #fff;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f3c5bd+0,e86c57+50,ea2803+51,ff6600+75,c72200+100;Red+Gloss */
+	background: rgb(243, 197, 189);
+	/* Old browsers */
+	background: -moz-linear-gradient(top, rgba(243, 197, 189, 1) 0%, rgba(232, 108, 87, 1) 50%, rgba(234, 40, 3, 1) 51%, rgba(255, 102, 0, 1) 75%, rgba(199, 34, 0, 1) 100%);
+	/* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(243, 197, 189, 1) 0%, rgba(232, 108, 87, 1) 50%, rgba(234, 40, 3, 1) 51%, rgba(255, 102, 0, 1) 75%, rgba(199, 34, 0, 1) 100%);
+	/* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(243, 197, 189, 1) 0%, rgba(232, 108, 87, 1) 50%, rgba(234, 40, 3, 1) 51%, rgba(255, 102, 0, 1) 75%, rgba(199, 34, 0, 1) 100%);
+	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3c5bd', endColorstr='#c72200', GradientType=0);
+	/* IE6-9 */
+}
+
+.red-right .red-right-top .info .other ul li .banker span:nth-child(2) {
+	color: blue;
+	width: 60%;
+}
+
+.red-right .red-right-top .info .other ul li .rayInfo,
+.success,
+.danger,
+.immune {
+	font: bold 16px "微软雅黑";
+}
+
+
+/*.red-right右边下半部分*/
+
+.red-right .red-right-bottom {
+	height: 350px;
+	overflow: scroll;
+}
+
+.red-right .red-right-bottom .customers {
+	position: relative;
+}
+
+.red-right .red-right-bottom .customers .table-striped{
+	width: 900px;
+}
+
+.red-right .red-right-bottom .customers .table-striped thead tr th,
+.red-right .red-right-bottom .customers .table-striped tbody tr th{
+	height: 40px;
+	border-left: 1px solid #D0E9C6;
+	text-align: center;
+	padding: 2px 5px ;
+}
+
+.red-right .red-right-bottom .customers .table-striped tbody tr{
+}
+
+
+
+/*刷新按钮*/
+.red-right .red-right-bottom .customers .refresh {
+	position: absolute;
+	height: 35px;
+	width: 50px;
+	padding: 0;
+	/*right: -306px;*/
+	right: 0px;
+	border-radius: 5px;
+	z-index: 1;
+}
+
+.red-right .red-right-bottom table caption {
+	font: bold 16px "微软雅黑";
+	text-align: center;
+	color: #fff;
+	border-radius: 5px;
+	letter-spacing: 10px;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cb60b3+0,9d70ea+50,a80077+50,c146a1+50,db36a4+100 */
+	background: rgb(203, 96, 179);
+	/* Old browsers */
+	background: -moz-linear-gradient(top, rgba(203, 96, 179, 1) 0%, rgba(157, 112, 234, 1) 50%, rgba(168, 0, 119, 1) 50%, rgba(193, 70, 161, 1) 50%, rgba(219, 54, 164, 1) 100%);
+	/* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(203, 96, 179, 1) 0%, rgba(157, 112, 234, 1) 50%, rgba(168, 0, 119, 1) 50%, rgba(193, 70, 161, 1) 50%, rgba(219, 54, 164, 1) 100%);
+	/* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(203, 96, 179, 1) 0%, rgba(157, 112, 234, 1) 50%, rgba(168, 0, 119, 1) 50%, rgba(193, 70, 161, 1) 50%, rgba(219, 54, 164, 1) 100%);
+	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cb60b3', endColorstr='#db36a4', GradientType=0);
+	/* IE6-9 */
+}
+
+
+.red-right .red-right-bottom table tr th .button {
+	width: 60px;
+	padding: 0;
+	font-size: 14px;
+	border-radius: 5px;
+	height: 35px;
+	line-height: 35px;
+}
+
+
+
+/*未踩到雷*/
+
+.success {
+	background-color: #DEF0D8;
+}
+
+
+/*踩到雷*/
+
+.danger {
+	background-color: #F2DEDF;
+	color: red;
+}
+
+
+/*免死*/
+
+.immune {
+	background-color: #289FFE;
+	color: #fff;
+}
+
+
+/*踩雷的人添加雷背景*/
+
+.red-left .info li {
+	background: transparent;
+}
+
+.step {
+	background: url(../images/zha2.png) no-repeat scroll 50% 50%;
+	background-size: 230px;
+}
+
+
+/*查看红包按钮*/
+
+.row .info .examine {
+	position: absolute;
+	top: 2px;
+	right: 2px;
+	height: 35px;
+	line-height: 35px;
+	width: 55px;
+	padding: 0;
+	z-index: 1;
+}
+
+
+
+
+#ratioModal .packageName::-webkit-input-placeholder{
+    font-size: 16px;
+    color: #DDDDDD;
+}
+
+

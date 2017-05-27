@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XSSConfig>
+    <!-- 是否进行header校验 -->
+    <isCheckHeader>false</isCheckHeader>
+    <!-- 是否进行parameter校验 -->
+    <isCheckParameter>true</isCheckParameter>
+    <!-- 是否记录日志 -->
+    <isLog>true</isLog>
+    <!-- 是否中断请求 -->
+    <isChain>true</isChain>
+    <!-- 是否开启特殊字符替换 -->
+    <replace>true</replace>
+    <!-- 是否开启特殊url校验 -->
+    <isCheckUrl>true</isCheckUrl>
+    <!--是否绑定过滤，列表内不绑定过滤-->
+    <whiteList>
+    	<white>/mobile/user/register</white>
+    	<white>/mobile/ajax/userMobile</white>
+    	<white>/mobile/user/mobilecheck</white>
+    	<white>/mobile/user/index</white>
+    	<white>/mobile/user/login</white>
+    	<white>/mobile/ajax/userlogin</white>
+    	<white>/mobile/user/forgetPass</white>
+    	<white>/mobile/user/forgetPwd</white>    	
+    	<white>/weChat</white>    	
+    </whiteList>
+</XSSConfig>

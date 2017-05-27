@@ -1,0 +1,113 @@
+function tableShow() {
+	console.log(1);
+	//拼接
+	var pj = "";
+
+	for(var i = 4; i <= 10; i++) {
+		pj += '<div class="t';
+		pj += i;
+		pj += '"><table class="table table-bordered" style="text-align: center;">';
+		pj += '<tr><td class="packets packeage_num" rowspan="';
+		pj += i + 2;
+		pj += '"><span>';
+		pj += i;
+		pj += '包</span></td></tr><tr><td colspan="3" class="theFont">单雷</td>';
+		pj += '<a class="minebtn button button-caution button-rounded" onclick="minebtnClcik(this)">保存</a>';
+		pj += '<td colspan="2" class="theFont">连雷</td><td colspan="2" class="theFont">免死</td></tr>';
+		pj += '<tr><td class="w100 single"><span>1</span><input type="hidden" class="louceng" value="" name="danlei0'
+		pj += i;
+		pj += '01"/></td><td class="w100 singleMine" rowspan="';
+		pj += i;
+		pj += '"><p><input type="radio" id="sm';
+		pj += i;
+		pj += '-name" class="name"  name="sm';
+		pj += i;
+		pj += '-choose" value="3" onclick="mineOn(this);ratioShow(this)" checked="checked"/><label for="sm';
+		pj += i;
+		pj += '-name">按名字</label></p><p><input type="radio" id="sm';
+		pj += i;
+		pj += '-floor" class="floor" name="sm';
+		pj += i;
+		pj += '-choose" value="2"  onclick="mineOff(this);ratioShow(this)" /><label for="sm';
+		pj += i;
+		pj += '-floor">按楼层</label></p><p><input type="radio" id="sm';
+		pj += i;
+		pj += '-mine" class="inmine" name="sm';
+		pj += i;
+		pj += '-choose" value="1" onclick="mineOff(this);ratioShow(this)" /><label for="sm';
+		pj += i;
+		pj += '-mine">按雷</label></p></td>';
+		pj += '<td class="w50"><input class="multiple mine" type="text" name="single_times_0';
+		pj += i;
+		pj += '01" value="0" size="5" onkeyup="checkNum(this)" />倍</td>';
+		pj += '<td class="w50"></td><td class="w50"></td><td class="w100 fromDeath" rowspan="';
+		pj += i;
+		pj += '"><p><input type="radio" id="fd';
+		pj += i;
+		pj += '-floor" name="fd';
+		pj += i;
+		pj += '-choose" value="1" checked="checked"/><label for="fd';
+		pj += i;
+		pj += '-floor">按楼层</label></p><p><input type="radio" id="fd';
+		pj += i;
+		pj += '-name" name="fd';
+		pj += i;
+		pj += '-choose" value="2" /><label for="fd';
+		pj += i;
+		pj += '-name">按名字</label></p><p><input type="radio" id="fd';
+		pj += i;
+		pj += '-mine" name="fd';
+		pj += i;
+		pj += '-choose" value="3" /><label for="fd';
+		pj += i;
+		pj += '-mine">单雷无免死</label></p><p><input type="hidden" class="lhwms" value="1" name="fdadd';
+		pj += i;	
+		pj  +='"><input type="checkbox" value="1" ';
+		pj += ' id="fd';
+		pj += i;
+		pj += '-check" onclick="checkboxVal(this)" /><label for="fd';
+		pj += i;
+		pj += '-check">连环无免死</label></p></td><td class="w100 avoid" rowspan="';
+		pj += i;
+		pj += '"><div class="fromDeath_Storey" onclick="select_Storey(this)"><input type="hidden" name="fromDeath';
+		pj += i;
+		pj += '_Storey" value="1"/>楼层:<span>1</span></div>';
+		pj += '<div class="fromDeath_Name"><input type="text" id="" name="freeName_0';
+		pj += i;
+		pj += '" value="" size="15" />';
+		pj += '<a class="button button-box button-tiny button-primary" onclick="fromDeathNameSelect(this)">';
+		pj += '<i class="fa fa-book"></i></a></div></td></tr>';
+		for(var j = 2; j <= i; j++) {
+			pj += '<tr><td class="single" ><input type="hidden" value="" class="louceng" name="danlei0';
+			pj += i;
+			pj += '0';
+			pj += j;
+			pj += '"/><span>';
+			pj += j;
+			pj += '</span></td><td><input class="multiple mine" type="text" value="0" name="single_times_0';
+			pj += i;
+			pj += '0';
+			pj += j;
+			pj += '" size="5" onkeyup="checkNum(this)" />倍</td><td><input type="hidden" value="';
+			pj += j;
+			pj += '" class="lceng" name="lianlei0';
+			pj += i;
+			pj += '0';
+			pj += j;
+			pj += '"/>';
+			pj += j;
+			pj += '</td><td><input class="multiple t';
+			pj += i;
+			pj += '-mines';
+			pj += j;
+			pj += '" type="text" value="0" name="serial_times_0';
+			pj += i;
+			pj += '0';
+			pj += j;
+			pj += '" size="5" onkeyup="checkNum(this)" />倍</td></tr>';
+		}
+		pj += '</table></div>';
+	}
+	$(".modal-body").html(pj);
+
+}
